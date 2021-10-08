@@ -1,17 +1,14 @@
 package domain;
 
 public class View {
-    private int views;
 
-    public View(int views) {
-        this.views = views;
+    private int count;  // count (integer) — число просмотров записи.
+
+    public int getCount() {
+        return count;
     }
 
-    public int getViews() {
-        return views;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
+    public void setCount(int count) {
+        this.count = count;
     }
 }

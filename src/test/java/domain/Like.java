@@ -2,37 +2,42 @@ package domain;
 
 public class Like {
 
-    private boolean canLike;
-    private int likesCount;
-    private String[] likesPeopleId;
+    private int count;              // число пользователей, которым понравилась запись;
+    private int[] userLikes;        // наличие отметки «Мне нравится» от текущего пользователя (1 — есть, 0 — нет);
+    private int[] canLike;          // информация о том, может ли текущий пользователь поставить отметку «Мне нравится» (1 — может, 0 — не может);
 
-    public Like(boolean canLike, int likesCount, String[] likesPeopleId) {
-        this.canLike = canLike;
-        this.likesCount = likesCount;
-        this.likesPeopleId = likesPeopleId;
+    public int getCount() {
+        return count;
     }
 
-    public boolean isCanLike() {
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public int[] getUserLikes() {
+        return userLikes;
+    }
+
+    public void setUserLikes(int[] userLikes) {
+        this.userLikes = userLikes;
+    }
+
+    public int[] getCanLike() {
         return canLike;
     }
 
-    public void setLike(boolean canLike) {
+    public void setCanLike(int[] canLike) {
         this.canLike = canLike;
     }
 
-    public int getLikesCount() {
-        return likesCount;
+    public int[] getCanPublish() {
+        return canPublish;
     }
 
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
+    public void setCanPublish(int[] canPublish) {
+        this.canPublish = canPublish;
     }
 
-    public String[] getLikesPeopleId() {
-        return likesPeopleId;
-    }
+    private int[] canPublish;       // (integer, [0,1]) — информация о том, может ли текущий пользователь сделать репост записи (1 — может, 0 — не может).
 
-    public void setLikesPeopleId(String[] likesPeopleId) {
-        this.likesPeopleId = likesPeopleId;
-    }
 }
