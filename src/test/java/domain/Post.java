@@ -13,11 +13,11 @@ public class Post {
     private int[] friendsOnly;   // 1, если запись была создана с опцией «Только для друзей».
     private int post_type;       // тип записи, может принимать следующие значения: post, copy, reply, postpone, suggest.
     private int signerId;        // идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем;
-    private int[] canPin;        // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может).
-    private int[] canDelete;     // информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может).
-    private int[] canEdit;       // информация о том, может ли текущий пользователь редактировать запись (1 — может, 0 — не может).
-    private int[] isPinned;      // информация о том, что запись закреплена.
-    private int[] markedAsAdds;  // информация о том, содержит ли запись отметку "реклама" (1 — да, 0 — нет).
+    private int canPin;          // информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может).
+    private int canDelete;       // информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может).
+    private int canEdit;         // информация о том, может ли текущий пользователь редактировать запись (1 — может, 0 — не может).
+    private int isPinned;        // информация о том, что запись закреплена.
+    private int markedAsAdds;    // информация о том, содержит ли запись отметку "реклама" (1 — да, 0 — нет).
     private boolean isFavorite;  // true, если объект добавлен в закладки у текущего пользователя.
     private int postponedId;     // идентификатор отложенной записи. Это поле возвращается тогда, когда запись стояла на таймере.
 
@@ -157,43 +157,43 @@ public class Post {
         this.signerId = signerId;
     }
 
-    public int[] getCanPin() {
+    public int getCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int[] canPin) {
+    public void setCanPin(int canPin) {
         this.canPin = canPin;
     }
 
-    public int[] getCanDelete() {
+    public int getCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int[] canDelete) {
+    public void setCanDelete(int canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int[] getCanEdit() {
+    public int getCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int[] canEdit) {
+    public void setCanEdit(int canEdit) {
         this.canEdit = canEdit;
     }
 
-    public int[] getIsPinned() {
+    public int getIsPinned() {
         return isPinned;
     }
 
-    public void setIsPinned(int[] isPinned) {
+    public void setIsPinned(int isPinned) {
         this.isPinned = isPinned;
     }
 
-    public int[] getMarkedAsAdds() {
+    public int getMarkedAsAdds() {
         return markedAsAdds;
     }
 
-    public void setMarkedAsAdds(int[] markedAsAdds) {
+    public void setMarkedAsAdds(int markedAsAdds) {
         this.markedAsAdds = markedAsAdds;
     }
 
